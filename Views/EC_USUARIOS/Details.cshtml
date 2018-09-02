@@ -1,0 +1,82 @@
+﻿@model EC_Ventas_Respuestos.Models.EC_USUARIOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EC_USUARIOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_CEDULA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_CEDULA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_APE1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_APE1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_APE2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_APE2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_TELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_TELEFONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_ESTADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS_CONTRASENNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS_CONTRASENNA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EC_USUARIOS_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

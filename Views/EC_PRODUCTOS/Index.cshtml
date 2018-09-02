@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EC_Ventas_Respuestos.Models.EC_PRODUCTOS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_MARCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_URL_IMAGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_PRECIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_PRODUCTO_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_PRODUCTO_MARCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_PRODUCTO_URL_IMAGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_PRODUCTO_DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_PRODUCTO_PRECIO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EC_PRODUCTO_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EC_PRODUCTO_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EC_PRODUCTO_ID })
+        </td>
+    </tr>
+}
+
+</table>

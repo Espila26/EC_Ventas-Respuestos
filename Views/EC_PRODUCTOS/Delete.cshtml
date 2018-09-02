@@ -1,0 +1,64 @@
+﻿@model EC_Ventas_Respuestos.Models.EC_PRODUCTOS
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EC_PRODUCTOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_MARCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_URL_IMAGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_URL_IMAGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_PRECIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_PRECIO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

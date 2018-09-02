@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EC_Ventas_Respuestos.Models.EC_COMPRAS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_CANTIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_IMPUESTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_SUBTOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_TOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_PAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTOS.EC_PRODUCTO_NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS.EC_USUARIOS_CEDULA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_COMPRAS_FECHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_COMPRAS_CANTIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_COMPRAS_IMPUESTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_COMPRAS_SUBTOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_COMPRAS_TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_COMPRAS_PAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_PRODUCTOS.EC_PRODUCTO_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EC_USUARIOS.EC_USUARIOS_CEDULA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EC_COMPRAS_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EC_COMPRAS_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EC_COMPRAS_ID })
+        </td>
+    </tr>
+}
+
+</table>

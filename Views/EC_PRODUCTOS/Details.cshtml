@@ -1,0 +1,58 @@
+﻿@model EC_Ventas_Respuestos.Models.EC_PRODUCTOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EC_PRODUCTOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_MARCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_URL_IMAGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_URL_IMAGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTO_PRECIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTO_PRECIO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EC_PRODUCTO_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

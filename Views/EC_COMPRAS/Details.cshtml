@@ -1,0 +1,82 @@
+﻿@model EC_Ventas_Respuestos.Models.EC_COMPRAS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EC_COMPRAS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_FECHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_COMPRAS_FECHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_CANTIDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_COMPRAS_CANTIDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_IMPUESTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_COMPRAS_IMPUESTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_SUBTOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_COMPRAS_SUBTOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_COMPRAS_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_COMPRAS_PAGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_COMPRAS_PAGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_PRODUCTOS.EC_PRODUCTO_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_PRODUCTOS.EC_PRODUCTO_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EC_USUARIOS.EC_USUARIOS_CEDULA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EC_USUARIOS.EC_USUARIOS_CEDULA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EC_COMPRAS_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
