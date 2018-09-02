@@ -11,7 +11,9 @@ namespace EC_Ventas_Respuestos.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class EC_PRODUCTOS
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +23,22 @@ namespace EC_Ventas_Respuestos.Models
         }
     
         public int EC_PRODUCTO_ID { get; set; }
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Por favor, ingrese un nombre"), DisplayName("Nombre del Producto"), StringLength(45, ErrorMessage = "Longitud del nombre es muy extensa. Por favor no exceda los 45 caracteres."), RegularExpression("([A-Za-z])+( [A-Za-z_]+)*", ErrorMessage = "Formato Inválido.")]
         public string EC_PRODUCTO_NOMBRE { get; set; }
+
+        [DisplayName("Marca")]
         public string EC_PRODUCTO_MARCA { get; set; }
+
+        [DisplayName("Imagen")]
         public string EC_PRODUCTO_URL_IMAGEN { get; set; }
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Por favor, ingrese una Descripción"), DisplayName("Descripción"), DataType(DataType.MultilineText)]
         public string EC_PRODUCTO_DESCRIPCION { get; set; }
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Por favor ingrese la precio de productos"), DisplayName("Precio"), StringLength(maximumLength: 12, ErrorMessage = "Error"), RegularExpression("([1-9][0-9]*)", ErrorMessage = "Formato Inválido (Ingrese números.)")]
         public double EC_PRODUCTO_PRECIO { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EC_COMPRAS> EC_COMPRAS { get; set; }
     }
